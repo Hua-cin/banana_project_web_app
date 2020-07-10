@@ -1,0 +1,14 @@
+{% extends "banana_frame.html" %}
+{% block content %}
+{% block page_content %}
+<div class="container-fluid">
+    <div class="row">
+       {{ super() }}
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+            <iframe width="100%" height="1400px" src="{{ url_for('static', filename='Kaohsiung_Banana.html') }}"
+                    frameborder="0" allowfullscreen scrolling="no"></iframe>
+        </main>
+    </div>
+</div>
+{% endblock %}
+{% endblock %}

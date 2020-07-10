@@ -1,0 +1,30 @@
+{% extends "banana_frame.html" %}
+{% block content %}
+{% block page_content %}
+<div class="container-fluid">
+    <div class="row">
+       {{ super() }}
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+        </main>
+            <div class="list-group-item">
+                <table cellspacing="0" align="Center" id="news1" style="width:100%;border-collapse:collapse;">
+                <tbody><tr style="background-color:#D9EDF7;">
+
+                    <!-- 將所有草泥馬的訓練紀錄列在下面 -->
+                {% for record in news %}
+                    <div class="row">
+
+                        <div class="col"><p>{{ record[0] }}<p></div>
+                        <div class="col"><p>{{ record[1] }}<p></div>
+                        <div class="col"><p>{{ record[2] }}<p></div>
+                        <div class="col"><p>{{ record[3] }}<p></div>
+                    </div>
+                {% endfor %}
+                    </tbody>
+                </table>
+
+            </div>
+    </div>
+</div>
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "banana_frame.html" %}
+{% block content %}
+{% block page_content %}
+<div class="container-fluid">
+    <div class="row">
+       {{ super() }}
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+            <iframe src="http://34.80.146.189:5601/app/kibana#/dashboard/b2819b20-c0ea-11ea-a690-258f66138ff9?embed=true&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))&_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:Banana_First_Dashbard,viewMode:view)"
+                   frameborder="0" height="600" width="100%"></iframe>
+        </main>
+    </div>
+</div>
+{% endblock %}
+{% endblock %}
+

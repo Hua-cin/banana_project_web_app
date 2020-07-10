@@ -1,0 +1,85 @@
+{% extends "bootstrap/base.html" %}
+{% block head %}
+    {{ super() }}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/dashboard/">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bootstrap.css" rel="stylesheet">
+
+    <style>
+      
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='dashboard.css') }}" rel="stylesheet">
+  
+{% endblock %}
+{% block title %}香蕉王國{% endblock %}
+{% block navbar %}
+    <nav class="navbar navbar-expand-sm bg-success sticky-top navbar-dark">
+        <a class="navbar-brand col-sm-2 col-sm-2 mr-0 px-3" href="/">香蕉王國</a>
+        <ul class="navbar-nav">
+            {% if page == 1 %}
+                <li class="nav-item active"><a class="nav-link" href="/">首頁</a></li>
+            {% else %}    
+                <li class="nav-item"><a class="nav-link" href="/">首頁</a></li>
+            {% endif %}
+            {% if page == 2 %}
+                <li class="nav-item active"><a class="nav-link" href="/taipei">台北市</a></li>
+            {% else %}    
+                <li class="nav-item"><a class="nav-link" href="/taipei">台北市</a></li>
+            {% endif %}    
+            {% if page == 3 %}    
+                <li class="nav-item active"><a class="nav-link" href="/new_taipei">新北市</a></li>
+            {% else %}      
+                <li class="nav-item"><a class="nav-link" href="/new_taipei">新北市</a></li>
+            {% endif %}    
+            {% if page == 4 %}    
+                <li class="nav-item active"><a class="nav-link" href="/taichung">台中市</a></li>
+            {% else %}      
+                <li class="nav-item"><a class="nav-link" href="/taichung">台中市</a></li>
+            {% endif %}    
+            {% if page == 5 %}    
+                <li class="nav-item active"><a class="nav-link" href="/kaohsiung">高雄市</a></li>
+            {% else %}      
+                <li class="nav-item"><a class="nav-link" href="/kaohsiung">高雄市</a></li>
+            {% endif %}    
+        </ul>
+    </nav>
+{% endblock %}
+{% block content %}
+{% block page_content %}
+
+    <nav id="sidebarMenu" class="col-sm-2 col-sm-2 d-md-block bg-light sidebar collapse">
+      <div class="sidebar-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" style="text-align: center;" href="/banana_report">報告香蕉</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="text-align: center;" href="/banana_news">新聞香蕉</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" style="text-align: center;" href="/">美食香蕉</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="text-align: center;" href="/">氣象香蕉</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" style="text-align: center;" href="http://www.banana.org.tw/Default.aspx" target="_blank">達人香蕉</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="text-align: center;" href="https://amis.afa.gov.tw/fruit/FruitProdDayTransInfo.aspx" target="_blank">批發市場</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+   
+{% endblock %}
+{% endblock %}
